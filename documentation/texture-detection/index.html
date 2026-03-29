@@ -12,29 +12,31 @@
         <meta name="author" content="StellArc">
       
       
-        <link rel="canonical" href="https://stellarcreal.github.io/Asset-Forge-site/">
+        <link rel="canonical" href="https://stellarcreal.github.io/Asset-Forge-site/documentation/texture-detection/">
       
       
+        <link rel="prev" href="../dry-run/">
       
-        <link rel="next" href="documentation/getting-started/">
+      
+        <link rel="next" href="../troubleshooting/">
       
       
         
       
       
-      <link rel="icon" href="assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
-        <title>Asset Forge</title>
+        <title>Texture Detection - Asset Forge</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -53,9 +55,9 @@
       
     
     
-      <link rel="stylesheet" href="stylesheets/extra.css">
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -80,7 +82,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#asset-forge" class="md-skip">
+        <a href="#texture-detection" class="md-skip">
           Skip to content
         </a>
       
@@ -96,7 +98,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="Asset Forge" class="md-header__button md-logo" aria-label="Asset Forge" data-md-component="logo">
+    <a href="../.." title="Asset Forge" class="md-header__button md-logo" aria-label="Asset Forge" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -116,7 +118,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Home
+              Texture Detection
             
           </span>
         </div>
@@ -234,7 +236,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="Asset Forge" class="md-nav__button md-logo" aria-label="Asset Forge" data-md-component="logo">
+    <a href="../.." title="Asset Forge" class="md-nav__button md-logo" aria-label="Asset Forge" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -261,37 +263,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Home
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="." class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
         
   
   
@@ -307,92 +282,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#what-it-does" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        What It Does
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#requirements" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Requirements
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#installation" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Installation
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#updates" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Updates
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#support" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Support
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#license" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        License
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -401,8 +290,10 @@
       
   
   
+    
   
   
+  
     
     
     
@@ -413,13 +304,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
@@ -440,7 +329,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -458,7 +347,7 @@
   
   
     <li class="md-nav__item">
-      <a href="documentation/getting-started/" class="md-nav__link">
+      <a href="../getting-started/" class="md-nav__link">
         
   
   
@@ -486,7 +375,7 @@
   
   
     <li class="md-nav__item">
-      <a href="documentation/material-assets/" class="md-nav__link">
+      <a href="../material-assets/" class="md-nav__link">
         
   
   
@@ -514,7 +403,7 @@
   
   
     <li class="md-nav__item">
-      <a href="documentation/object-assets/" class="md-nav__link">
+      <a href="../object-assets/" class="md-nav__link">
         
   
   
@@ -542,7 +431,7 @@
   
   
     <li class="md-nav__item">
-      <a href="documentation/preview-renders/" class="md-nav__link">
+      <a href="../preview-renders/" class="md-nav__link">
         
   
   
@@ -570,7 +459,7 @@
   
   
     <li class="md-nav__item">
-      <a href="documentation/dry-run/" class="md-nav__link">
+      <a href="../dry-run/" class="md-nav__link">
         
   
   
@@ -595,10 +484,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="documentation/texture-detection/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Texture Detection
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -614,6 +530,126 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#how-scanning-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How Scanning Works
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#supported-map-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Supported Map Types
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#naming-keywords" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Naming Keywords
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Naming Keywords">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#folder-tails" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Folder Tails
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#customizing-keywords" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Customizing Keywords
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#udim-detection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        UDIM Detection
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#requirements-inference" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Requirements Inference
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Requirements Inference">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#combine-root-overrides" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Combine Root + Overrides
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -626,7 +662,7 @@
   
   
     <li class="md-nav__item">
-      <a href="documentation/troubleshooting/" class="md-nav__link">
+      <a href="../troubleshooting/" class="md-nav__link">
         
   
   
@@ -661,7 +697,7 @@
   
   
     <li class="md-nav__item">
-      <a href="changelog/" class="md-nav__link">
+      <a href="../../changelog/" class="md-nav__link">
         
   
   
@@ -688,7 +724,7 @@
   
   
     <li class="md-nav__item">
-      <a href="faq/" class="md-nav__link">
+      <a href="../../faq/" class="md-nav__link">
         
   
   
@@ -735,10 +771,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#what-it-does" class="md-nav__link">
+  <a href="#how-scanning-works" class="md-nav__link">
     <span class="md-ellipsis">
       
-        What It Does
+        How Scanning Works
       
     </span>
   </a>
@@ -746,10 +782,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#requirements" class="md-nav__link">
+  <a href="#supported-map-types" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Requirements
+        Supported Map Types
       
     </span>
   </a>
@@ -757,10 +793,49 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#installation" class="md-nav__link">
+  <a href="#naming-keywords" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Installation
+        Naming Keywords
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Naming Keywords">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#folder-tails" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Folder Tails
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#customizing-keywords" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Customizing Keywords
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#udim-detection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        UDIM Detection
       
     </span>
   </a>
@@ -768,35 +843,30 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#updates" class="md-nav__link">
+  <a href="#requirements-inference" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Updates
+        Requirements Inference
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Requirements Inference">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#combine-root-overrides" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Combine Root + Overrides
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#support" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Support
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#license" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        License
-      
-    </span>
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -820,75 +890,110 @@
   
 
 
-<h1 id="asset-forge">Asset Forge<a class="headerlink" href="#asset-forge" title="Permanent link">&para;</a></h1>
-<p><strong>Build material assets from texture folders, mark object assets, render custom previews, and dry run everything first — all from the Asset Browser sidebar.</strong></p>
-<p>Asset Forge is a Blender 5.1 add-on that simplifies and automates common asset-related tasks directly inside the Asset Browser.</p>
-<p><a class="md-button md-button--primary" href="#">:material-store: Get it on Superhive</a>  <!-- TODO: Replace # with your Superhive product URL -->
-<a class="md-button" href="documentation/getting-started/">:material-book-open-variant: Documentation</a></p>
-<hr />
-<h2 id="what-it-does">What It Does<a class="headerlink" href="#what-it-does" title="Permanent link">&para;</a></h2>
-<div class="grid cards">
-<ul>
-<li>
-<p>:material-palette:{ .amber } <strong>Material Assets</strong></p>
-<hr />
-<p>Build PBR material assets from texture folders with a single click. Scans for common map types with customizable naming keywords, sets up shader graphs, and registers everything as assets. Supports UDIMs, overwrite policies, and manual map overrides.</p>
-</li>
-<li>
-<p>:material-cube-outline:{ .teal } <strong>Object Assets</strong></p>
-<hr />
-<p>Mark selected objects, collections, or your entire file as assets in one action, with automatic catalog writing and hierarchy placement controls for parents, children, and assemblies.</p>
-</li>
-<li>
-<p>:material-camera:{ .blue } <strong>Preview Renders</strong></p>
-<hr />
-<p>Render custom asset thumbnails with configurable camera, lighting, and background settings. Inspect the setup before committing, then batch render in Quick or Eevee mode.</p>
-</li>
-<li>
-<p>:material-clipboard-check-outline:{ .rose } <strong>Dry Run &amp; Reports</strong></p>
-<hr />
-<p>Preview what every action will do before applying. Results appear in a report panel with expandable details and issue summaries.</p>
-</li>
-</ul>
-</div>
-<hr />
-<h2 id="requirements">Requirements<a class="headerlink" href="#requirements" title="Permanent link">&para;</a></h2>
+<h1 id="texture-detection">Texture Detection<a class="headerlink" href="#texture-detection" title="Permanent link">&para;</a></h1>
+<p>Asset Forge's texture scanner automatically identifies and groups PBR texture maps from your folders. This page explains how the detection works and how to customize it.</p>
+<h2 id="how-scanning-works">How Scanning Works<a class="headerlink" href="#how-scanning-works" title="Permanent link">&para;</a></h2>
+<p>When you set a <strong>Texture Root</strong> and run <strong>Make Material Assets</strong>, the scanner:</p>
+<ol>
+<li>Traverses the root folder and its subfolders recursively.</li>
+<li>Identifies image files by their extension.</li>
+<li>Matches each image to a map type based on keywords in the filename or parent folder name.</li>
+<li>Groups images by their base name (the part before the map type suffix).</li>
+<li>Creates one material per group, connecting each map to the appropriate shader input.</li>
+</ol>
+<h2 id="supported-map-types">Supported Map Types<a class="headerlink" href="#supported-map-types" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
 <tr>
-<th>Requirement</th>
-<th>Details</th>
+<th>Map Type</th>
+<th>Default Keywords</th>
+<th>Shader Input</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Blender</strong></td>
-<td>5.1 or newer</td>
+<td><strong>Base Color</strong></td>
+<td><code>basecolor</code>, <code>base_color</code>, <code>base-colour</code>, <code>base_colour</code>, <code>basecolour</code>, <code>albedo</code>, <code>diffuse</code>, <code>color</code>, <code>colour</code>, <code>col</code></td>
+<td>Base Color</td>
 </tr>
 <tr>
-<td><strong>Saved file</strong></td>
-<td>A saved <code>.blend</code> file is needed for object asset catalogs and rendered preview output</td>
+<td><strong>Normal</strong></td>
+<td><code>normalgl</code>, <code>normal_gl</code>, <code>normaldx</code>, <code>normal_dx</code>, <code>normal</code>, <code>nrm</code>, <code>nor</code></td>
+<td>Normal Map</td>
+</tr>
+<tr>
+<td><strong>Roughness</strong></td>
+<td><code>roughness</code>, <code>rough</code>, <code>rgh</code></td>
+<td>Roughness</td>
+</tr>
+<tr>
+<td><strong>Metallic</strong></td>
+<td><code>metalness</code>, <code>metallic</code>, <code>metal</code></td>
+<td>Metallic</td>
+</tr>
+<tr>
+<td><strong>Height</strong></td>
+<td><code>displacement</code>, <code>height</code>, <code>bump</code>, <code>disp</code></td>
+<td>Displacement</td>
+</tr>
+<tr>
+<td><strong>Alpha</strong></td>
+<td><code>opacity</code>, <code>alpha</code>, <code>mask</code></td>
+<td>Alpha</td>
 </tr>
 </tbody>
 </table>
-<p>Support for earlier Blender versions is planned for a future update.</p>
-<hr />
-<h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h2>
+<h2 id="naming-keywords">Naming Keywords<a class="headerlink" href="#naming-keywords" title="Permanent link">&para;</a></h2>
+<p>The scanner matches map types by looking for keywords in the filename. These keywords are fully customizable in the <strong>Texture Naming Keywords</strong> section of the panel.</p>
+<p>Each map type has its own keyword list. Keywords are matched case-insensitively against the filename (without extension).</p>
+<h3 id="folder-tails">Folder Tails<a class="headerlink" href="#folder-tails" title="Permanent link">&para;</a></h3>
+<p>Folder tail keywords identify parent folders that should be traversed into rather than treated as material names. Common examples: <code>maps</code>, <code>textures</code>, <code>tex</code>.</p>
+<p>If your texture folders are structured like:</p>
+<div class="highlight"><pre><span></span><code>brick_wall/
+├── maps/
+│   ├── basecolor.png
+│   ├── normal.png
+│   └── roughness.png
+</code></pre></div>
+<p>The <code>maps</code> folder tail ensures the scanner looks inside <code>maps/</code> and attributes the textures to <code>brick_wall</code>.</p>
+<h3 id="customizing-keywords">Customizing Keywords<a class="headerlink" href="#customizing-keywords" title="Permanent link">&para;</a></h3>
+<p>To add or modify keywords:</p>
 <ol>
-<li>Download the release <code>.zip</code>.</li>
-<li>In Blender, open <strong>Edit → Preferences → Add-ons</strong>.</li>
-<li>Click <strong>Install from Disk…</strong></li>
-<li>Select the downloaded <code>.zip</code> and enable <strong>Asset Forge</strong>.</li>
+<li>Expand <strong>Texture Naming Keywords</strong> in the Material Assets section.</li>
+<li>Edit the keyword field for the map type you want to change.</li>
+<li>Keywords are comma-separated.</li>
 </ol>
-<p>The add-on appears in the Asset Browser sidebar under the <strong>Asset Forge</strong> tab.</p>
-<hr />
-<h2 id="updates">Updates<a class="headerlink" href="#updates" title="Permanent link">&para;</a></h2>
-<p>Asset Forge is actively developed with more features and improvements planned.</p>
-<h2 id="support">Support<a class="headerlink" href="#support" title="Permanent link">&para;</a></h2>
-<p>Found a bug or have a feature suggestion? Reach out through the Superhive inbox — feedback helps shape future updates.</p>
-<hr />
-<h2 id="license">License<a class="headerlink" href="#license" title="Permanent link">&para;</a></h2>
-<p>Asset Forge is licensed under <a href="https://www.gnu.org/licenses/gpl-3.0.html">GPL-3.0-or-later</a>.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Use <strong>Dry Run</strong> after changing keywords to verify the scanner detects your textures correctly.</p>
+</div>
+<h2 id="udim-detection">UDIM Detection<a class="headerlink" href="#udim-detection" title="Permanent link">&para;</a></h2>
+<p>When <strong>Detect UDIM Tiles</strong> is enabled, the scanner looks for numbered tile suffixes like <code>1001</code>, <code>1002</code>, <code>1003</code> in filenames. Tiles sharing the same base name are grouped into a single UDIM material.</p>
+<p>A UDIM texture set might look like:</p>
+<div class="highlight"><pre><span></span><code>wall_basecolor.1001.png
+wall_basecolor.1002.png
+wall_basecolor.1003.png
+wall_normal.1001.png
+wall_normal.1002.png
+wall_normal.1003.png
+</code></pre></div>
+<p>These would be grouped into one <code>wall</code> material with UDIM tile support.</p>
+<h2 id="requirements-inference">Requirements Inference<a class="headerlink" href="#requirements-inference" title="Permanent link">&para;</a></h2>
+<p>Required maps are determined automatically:</p>
+<ol>
+<li>The scanner examines what map types exist across all texture sets in your root folder.</li>
+<li>If a map type appears consistently, it becomes required.</li>
+<li>Any texture set missing a required map is skipped.</li>
+<li><strong>Base color is always required</strong> — a set without a base color map is never valid.</li>
+</ol>
+<p>This means the requirements adapt to your texture library automatically. If all your sets include normal maps, normal maps become required. If only some do, they remain optional.</p>
+<h3 id="combine-root-overrides">Combine Root + Overrides<a class="headerlink" href="#combine-root-overrides" title="Permanent link">&para;</a></h3>
+<p>When <strong>Combine Root + Overrides</strong> is enabled, required map types are merged from both the root scan and the enabled manual overrides. When disabled, overrides fully replace the root scan results for their map types.</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p><strong>Combine enabled:</strong> Root detects base color + normal. Override adds roughness. All three become required.</p>
+<p><strong>Combine disabled:</strong> Root detects base color + normal. Override adds roughness. Only base color + roughness are required (root normals are replaced by the override scope).</p>
+</div>
 
 
 
@@ -960,10 +1065,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy", "toc.follow"], "search": "assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy", "toc.follow"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
   </body>

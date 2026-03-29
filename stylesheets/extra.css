@@ -1,0 +1,11 @@
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color: #f0a035;
+  --md-primary-bg-color: #0e0f13;
+  --md-accent-fg-color: #f0a035;
+}
+
+[data-md-color-scheme="default"] {
+  --md-primary-fg-color: #f0a035;
+  --md-primary-bg-color: #ffffff;
+  --md-accent-fg-color: #c47f1a;
+}
