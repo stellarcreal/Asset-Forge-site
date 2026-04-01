@@ -1086,26 +1086,31 @@
 
 
 <h1 id="preview-renders">Preview Renders<a class="headerlink" href="#preview-renders" title="Permanent link">&para;</a></h1>
-<p>Asset Forge renders custom asset preview thumbnails with full control over camera and lighting. Inspect the setup before committing, then batch render in Quick or Eevee mode.</p>
+<p>Asset Forge renders custom asset preview thumbnails with full control over camera, lighting, thumbnail size, and selection scope. Inspect the setup before committing, then batch render in Quick or Eevee mode.</p>
+<p>Rendered preview jobs require a saved <code>.blend</code> file and at least one open <strong>3D Viewport</strong>. Output images are written to an <code>mma_thumbs</code> folder next to the saved file before they are assigned back to the asset previews.</p>
 <h2 id="environment-setup">Environment Setup<a class="headerlink" href="#environment-setup" title="Permanent link">&para;</a></h2>
 <h3 id="lighting-type">Lighting Type<a class="headerlink" href="#lighting-type" title="Permanent link">&para;</a></h3>
 <ul>
-<li><strong>Sun</strong> — A directional sun light with configurable energy and rotation.</li>
-<li><strong>HDRI</strong> — An environment texture for image-based lighting. Select an <code>.hdr</code> or <code>.exr</code> file from disk.</li>
+<li><strong>HDRI</strong> — Uses an environment image from the <strong>World Images</strong> folder for image-based lighting.</li>
+<li><strong>Sun</strong> — Uses a directional sun light with configurable strength, softness, rotation, and elevation.</li>
+<li><strong>Area</strong> — Uses a softer studio-style area light with configurable distance and size.</li>
+<li><strong>Point</strong> — Uses an omni-directional point light with configurable distance and shadow radius.</li>
 </ul>
 <h3 id="background">Background<a class="headerlink" href="#background" title="Permanent link">&para;</a></h3>
-<p>Configure the world background for your preview renders. Options depend on the lighting type selected.</p>
+<p>Configure the background used for preview renders. HDRI mode uses the selected environment image plus <strong>World Rotation</strong>. Sun, Area, and Point lighting use a solid <strong>Background Color</strong>.</p>
 <h3 id="transparent-background">Transparent Background<a class="headerlink" href="#transparent-background" title="Permanent link">&para;</a></h3>
 <p>Enable transparent background for setup previews when you want the object rendered without a visible world behind it.</p>
+<h3 id="thumbnail-size">Thumbnail Size<a class="headerlink" href="#thumbnail-size" title="Permanent link">&para;</a></h3>
+<p>Use <strong>Thumbnail Size</strong> to pick a square preview resolution. Presets run from <code>32p</code> through <code>1024p</code>, and <strong>Custom</strong> lets you type your own pixel size.</p>
 <h2 id="camera-setup">Camera Setup<a class="headerlink" href="#camera-setup" title="Permanent link">&para;</a></h2>
 <h3 id="projection">Projection<a class="headerlink" href="#projection" title="Permanent link">&para;</a></h3>
-<p>Choose the camera projection type for preview renders.</p>
+<p>Choose the camera projection type for preview renders. <strong>Perspective</strong> gives a more photographic look and uses focal length, while <strong>Orthographic</strong> removes perspective distortion for flatter catalogue-style thumbnails.</p>
 <h3 id="padding">Padding<a class="headerlink" href="#padding" title="Permanent link">&para;</a></h3>
-<p>Controls how much space surrounds the object in the preview. Higher padding means the object appears smaller with more breathing room.</p>
+<p><strong>Edge Padding (%)</strong> controls framing. Positive values add more empty border, while negative values tighten the frame and can crop the object.</p>
 <h3 id="camera-angle-presets">Camera Angle Presets<a class="headerlink" href="#camera-angle-presets" title="Permanent link">&para;</a></h3>
-<p>Quick presets for common camera angles. Select a preset to snap the camera to a predefined position.</p>
+<p>Use <strong>Camera Preset</strong> for quick views like <strong>Isometric</strong>, <strong>Front</strong>, <strong>Side</strong>, <strong>Top</strong>, and <strong>3/4</strong>, then fine-tune with <strong>Camera Rotation</strong>, <strong>Focal Length</strong>, and clip distances if needed.</p>
 <h2 id="setup-preview">Setup Preview<a class="headerlink" href="#setup-preview" title="Permanent link">&para;</a></h2>
-<p>Setup preview lets you inspect the camera and lighting rig before committing to a full render.</p>
+<p>Setup preview lets you inspect the camera and lighting rig before committing to a full render. You can choose the sample <strong>Preview Mesh</strong> (Monkey, Cube, UV Sphere, Icosphere, Cylinder, Cone, or Torus), optionally enable <strong>Include Floor</strong>, and toggle <strong>Transparent Background</strong>.</p>
 <ol>
 <li>Configure your environment and camera settings.</li>
 <li>Click <strong>Refresh Setup Preview</strong> to generate a sample render.</li>
@@ -1114,7 +1119,7 @@
 </ol>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Setup preview is a static sample render — it does not update live. Refresh it every time you change lighting or camera settings.</p>
+<p>Setup preview is a static sample render - it does not update live. Refresh it every time you change lighting, camera, preview mesh, or background settings.</p>
 </div>
 <h2 id="render-modes">Render Modes<a class="headerlink" href="#render-modes" title="Permanent link">&para;</a></h2>
 <h3 id="quick">Quick<a class="headerlink" href="#quick" title="Permanent link">&para;</a></h3>
@@ -1127,17 +1132,17 @@
 </ul>
 <h2 id="batch-scope">Batch Scope<a class="headerlink" href="#batch-scope" title="Permanent link">&para;</a></h2>
 <h3 id="selected">Selected<a class="headerlink" href="#selected" title="Permanent link">&para;</a></h3>
-<p>Render previews for the currently selected assets. Choose whether <strong>Selected</strong> reads from:</p>
+<p>Render previews for the currently selected assets. When <strong>Selected</strong> is active, choose whether the targets come from:</p>
 <ul>
-<li><strong>Outliner / Viewport</strong> — Uses the selection in the 3D viewport or outliner.</li>
-<li><strong>Asset Browser</strong> — Uses the selection in the Asset Browser.</li>
+<li><strong>Outliner / Viewport</strong> — Uses the current object selection. <strong>Quick Preview</strong> expects selected objects that are already asset-marked, while <strong>Eevee</strong> can render the current selection directly before the preview is attached to the datablock.</li>
+<li><strong>Asset Browser</strong> — Uses the current local asset selection in the Asset Browser.</li>
 </ul>
 <h3 id="collection-catalogue">Collection / Catalogue<a class="headerlink" href="#collection-catalogue" title="Permanent link">&para;</a></h3>
-<p>Render previews for all assets in the active collection or asset catalogue.</p>
+<p>Render previews for all assets in the active asset catalogue. If Asset Forge cannot resolve a current catalogue selection, it falls back to the active collection.</p>
 <h3 id="all">All<a class="headerlink" href="#all" title="Permanent link">&para;</a></h3>
-<p>Render previews for every asset in the file.</p>
+<p>Render previews for every asset-marked object and collection in the current file.</p>
 <h2 id="clear-asset-previews">Clear Asset Previews<a class="headerlink" href="#clear-asset-previews" title="Permanent link">&para;</a></h2>
-<p>Removes custom preview images from selected assets, reverting them to Blender's default auto-generated previews.</p>
+<p>Removes custom preview images from the currently selected local assets in the Asset Browser, reverting them to Blender's default auto-generated previews.</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>Use <strong>Dry Run</strong> before batch rendering to preview which assets will be processed.</p>

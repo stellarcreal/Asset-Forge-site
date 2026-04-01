@@ -835,11 +835,12 @@
 <p>Choose what to mark as assets:</p>
 <ul>
 <li><strong>Selected Objects</strong> — Only the currently selected objects in the viewport.</li>
-<li><strong>Collection</strong> — All objects in the active collection.</li>
-<li><strong>Full File</strong> — Every object in the <code>.blend</code> file.</li>
+<li><strong>Selected Collection</strong> — All objects in the active collection.</li>
+<li><strong>All</strong> — Every object in the current <code>.blend</code> file.</li>
 </ul>
 <h2 id="catalog-writing">Catalog Writing<a class="headerlink" href="#catalog-writing" title="Permanent link">&para;</a></h2>
-<p>Asset catalogs are written automatically based on the collection structure in your file. Each collection becomes a catalog path, and objects are placed in the catalog matching their parent collection.</p>
+<p>Asset catalogs are written automatically based on the collection structure in your file. Each collection becomes a catalog path, and objects are placed in the deepest matching collection path available.</p>
+<p>If an object is not inside a resolvable scene collection path, Asset Forge falls back to an <code>Uncategorized</code> catalog.</p>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p>The <code>.blend</code> file must be saved before creating object assets. Blender's asset catalog system requires a saved file to write catalog data.</p>
@@ -857,8 +858,10 @@
 <h3 id="children">Children<a class="headerlink" href="#children" title="Permanent link">&para;</a></h3>
 <p>Controls where child objects are placed:</p>
 <ul>
+<li><strong>Disabled</strong> — Do not create separate child object assets.</li>
 <li><strong>Same Catalog</strong> — Place child assets in the same catalog as the parent/root object.</li>
 <li><strong>Subcatalog</strong> — Place child assets in a <code>Children</code> subcatalog under the parent catalog.</li>
+<li><strong>Top-Level</strong> — Place child assets in a top-level <code>Children</code> catalog path.</li>
 </ul>
 <h3 id="assembly">Assembly<a class="headerlink" href="#assembly" title="Permanent link">&para;</a></h3>
 <p>Controls whether and where assembly collection assets are created:</p>
@@ -868,6 +871,7 @@
 <li><strong>Subcatalog</strong> — Place assembly assets in an <code>Assembly</code> subcatalog.</li>
 <li><strong>Top-Level</strong> — Place assembly assets in a top-level <code>Assembly</code> catalog path.</li>
 </ul>
+<p>When assembly creation is enabled for a parent object, Asset Forge creates or reuses a generated collection named <code>&lt;root&gt;_complete</code>, links the root object plus its recursive children into that collection, and marks that collection as an asset.</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>Use <strong>Dry Run</strong> to preview the catalog structure before committing. The report shows exactly where each asset will be placed.</p>
@@ -875,11 +879,12 @@
 <h2 id="running-it">Running It<a class="headerlink" href="#running-it" title="Permanent link">&para;</a></h2>
 <ol>
 <li>Save the <code>.blend</code> file.</li>
-<li>Choose a scope (Selected, Collection, or Full File).</li>
-<li>Adjust hierarchy placement if needed.</li>
+<li>Choose a scope (<strong>Selected Objects</strong>, <strong>Selected Collection</strong>, or <strong>All</strong>).</li>
+<li>Adjust <strong>Parents</strong>, <strong>Children</strong>, and <strong>Assembly</strong> placement if needed.</li>
 <li>Click <strong>Make Object Assets</strong>.</li>
 <li>Check the report panel for results.</li>
 </ol>
+<p>Parent objects can produce two asset results in a single run: an object asset for the parent itself and an assembly collection asset if <strong>Assembly</strong> is enabled.</p>
 
 
 

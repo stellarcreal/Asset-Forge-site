@@ -843,7 +843,8 @@
 <h2 id="no-previews-are-rendered">No previews are rendered<a class="headerlink" href="#no-previews-are-rendered" title="Permanent link">&para;</a></h2>
 <ul>
 <li><strong>Save the <code>.blend</code> file first.</strong> Rendered previews require a saved file for output.</li>
-<li><strong>Check the HDRI file.</strong> If HDRI lighting is enabled, verify the selected <code>.hdr</code> or <code>.exr</code> file still exists at the specified path.</li>
+<li><strong>Check the environment image.</strong> If HDRI lighting is enabled, verify the selected environment image still exists in the configured <strong>World Images</strong> folder.</li>
+<li><strong>Open a 3D Viewport.</strong> Preview rendering requires at least one 3D Viewport to be open so Blender can frame and render the target.</li>
 <li><strong>Verify assets are marked.</strong> Custom rendered previews require the target objects or collections to already be marked as assets. Mark them first using the Object Assets section.</li>
 <li><strong>Check the report panel.</strong> Expand <strong>Issues</strong> for specific error messages.</li>
 </ul>
@@ -863,7 +864,7 @@
 </ul>
 <h2 id="the-add-on-does-not-appear-in-the-asset-browser">The add-on does not appear in the Asset Browser<a class="headerlink" href="#the-add-on-does-not-appear-in-the-asset-browser" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong>Enable the add-on.</strong> Open <strong>Edit → Preferences → Add-ons</strong> and verify Asset Forge is enabled.</li>
+<li><strong>Enable the add-on.</strong> Open <strong>Edit &gt; Preferences</strong>, then use <strong>Get Extensions</strong> or <strong>Add-ons</strong> to confirm <strong>Asset Forge</strong> is installed and enabled.</li>
 <li><strong>Show the sidebar.</strong> In the Asset Browser, press <span class="keys"><kbd class="key-n">N</kbd></span> to toggle the sidebar if it's hidden.</li>
 <li><strong>Correct area type.</strong> Asset Forge only appears in the <strong>Asset Browser</strong> editor, not in the 3D Viewport or other editors.</li>
 </ul>
@@ -872,7 +873,7 @@
 <h2 id="object-assets-have-no-catalog">Object assets have no catalog<a class="headerlink" href="#object-assets-have-no-catalog" title="Permanent link">&para;</a></h2>
 <ul>
 <li><strong>Save the file first.</strong> Catalog writing requires a saved <code>.blend</code> file.</li>
-<li><strong>Check the scope.</strong> Make sure the objects you want to mark are included in the selected scope (Selected, Collection, or Full File).</li>
+<li><strong>Check the scope.</strong> Make sure the objects you want to mark are included in the selected scope (<strong>Selected Objects</strong>, <strong>Selected Collection</strong>, or <strong>All</strong>).</li>
 </ul>
 <h2 id="udim-tiles-not-grouped">UDIM tiles not grouped<a class="headerlink" href="#udim-tiles-not-grouped" title="Permanent link">&para;</a></h2>
 <ul>

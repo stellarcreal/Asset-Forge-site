@@ -979,8 +979,8 @@ normal/
 <h2 id="build-options">Build Options<a class="headerlink" href="#build-options" title="Permanent link">&para;</a></h2>
 <h3 id="shader-choice">Shader Choice<a class="headerlink" href="#shader-choice" title="Permanent link">&para;</a></h3>
 <ul>
-<li><strong>Principled BSDF</strong> — Full PBR setup. Connects all detected map types to the appropriate inputs.</li>
-<li><strong>Diffuse</strong> — Simple diffuse shader. Uses base color only.</li>
+<li><strong>Principled BSDF</strong> — Full PBR setup. Connects base color, roughness, metallic, normal, height, and alpha when those maps are detected.</li>
+<li><strong>Diffuse</strong> — Simpler shader graph. Uses base color and still applies normal and height detail when those maps are available.</li>
 </ul>
 <h3 id="overwrite-policy">Overwrite Policy<a class="headerlink" href="#overwrite-policy" title="Permanent link">&para;</a></h3>
 <p>Controls what happens when a material with the same name already exists:</p>
@@ -994,7 +994,7 @@ normal/
 <p><strong>Force Replace Existing</strong> will replace hand-made materials. Use <strong>Dry Run</strong> first to check what will be affected.</p>
 </div>
 <h3 id="detect-udim-tiles">Detect UDIM Tiles<a class="headerlink" href="#detect-udim-tiles" title="Permanent link">&para;</a></h3>
-<p>When enabled, the scanner detects numbered tile sets like <code>1001</code>, <code>1002</code>, <code>1003</code> and groups them as a single UDIM material.</p>
+<p>When enabled, the scanner detects numbered tile sets like <code>1001</code>, <code>1002</code>, <code>1003</code> and groups them as a single UDIM material. Asset Forge then treats that set as one tiled texture input inside the generated material.</p>
 <h2 id="requirements-inference">Requirements Inference<a class="headerlink" href="#requirements-inference" title="Permanent link">&para;</a></h2>
 <p>Required maps are inferred automatically from what the scanner detects in your texture root. If every texture set in your root folder includes a normal map, normal maps become required — and any set missing a normal map will be skipped.</p>
 <p>Base color is always required regardless of what's detected.</p>
@@ -1009,7 +1009,7 @@ normal/
 <li>Click <strong>Make Material Assets</strong>.</li>
 <li>Check the report panel at the top of the sidebar for results.</li>
 </ol>
-<p>The report shows how many materials were created, skipped, or overwritten, with expandable details per material.</p>
+<p>The report shows how many materials were created, skipped, or overwritten, with expandable details per material, including required maps, missing maps, detected UDIM tiles, and the source path used for each texture input.</p>
 
 
 
