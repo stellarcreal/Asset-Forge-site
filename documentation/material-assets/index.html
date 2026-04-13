@@ -982,6 +982,8 @@ normal/
 <li><strong>Principled BSDF</strong> — Full PBR setup. Connects base color, roughness, metallic, normal, height, and alpha when those maps are detected.</li>
 <li><strong>Diffuse</strong> — Simpler shader graph. Uses base color and still applies normal and height detail when those maps are available.</li>
 </ul>
+<h3 id="material-preview">Material Preview<a class="headerlink" href="#material-preview" title="Permanent link">&para;</a></h3>
+<p>Choose the Blender preview shape used for generated material asset thumbnails. <strong>Flat</strong>, <strong>Sphere</strong>, <strong>Cube</strong>, and <strong>Shaderball</strong> are available so you can match the preview style to the material you are building.</p>
 <h3 id="overwrite-policy">Overwrite Policy<a class="headerlink" href="#overwrite-policy" title="Permanent link">&para;</a></h3>
 <p>Controls what happens when a material with the same name already exists:</p>
 <ul>
@@ -1004,7 +1006,7 @@ normal/
 </div>
 <h2 id="running-a-build">Running a Build<a class="headerlink" href="#running-a-build" title="Permanent link">&para;</a></h2>
 <ol>
-<li>Configure your texture sources and build options.</li>
+<li>Configure your texture sources and build options, including <strong>Shader</strong>, <strong>Material Preview</strong>, and overwrite behavior.</li>
 <li>Optionally enable <strong>Dry Run</strong> to preview results.</li>
 <li>Click <strong>Make Material Assets</strong>.</li>
 <li>Check the report panel at the top of the sidebar for results.</li>
